@@ -1,0 +1,60 @@
+/* 属性区左侧的竖线：样子是「+ 添加属性」那条横线竖过来——
+   一条发丝线中间嵌一个删除图标。鼠标移到属性区才出现，移到竖线上墨色加深 */
+.metadata-container > .metadata-content {
+	position: relative;
+}
+
+.clear-properties-bar {
+	position: absolute;
+	/* top / height 由脚本按属性列表的实际位置设置 */
+	top: 0;
+	left: -26px;
+	width: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	color: var(--text-faint);
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+/* 上下两段发丝线 */
+.clear-properties-bar::before,
+.clear-properties-bar::after {
+	content: "";
+	flex: 1 1 auto;
+	width: 1px;
+	background: var(--background-modifier-border);
+	transition: background 0.2s ease;
+}
+.clear-properties-bar::before { margin-bottom: 8px; }
+.clear-properties-bar::after { margin-top: 8px; }
+
+.clear-properties-icon {
+	display: flex;
+	color: inherit;
+}
+
+.clear-properties-icon .svg-icon {
+	width: 14px;
+	height: 14px;
+}
+
+.metadata-container:hover .clear-properties-bar {
+	opacity: 1;
+}
+
+.clear-properties-bar:hover {
+	color: var(--text-muted);
+}
+.clear-properties-bar:hover::before,
+.clear-properties-bar:hover::after {
+	background: var(--background-modifier-border-hover);
+}
+
+/* 手机上没有鼠标悬停：一直显示 */
+.is-mobile .clear-properties-bar {
+	opacity: 1;
+	left: -20px;
+}
