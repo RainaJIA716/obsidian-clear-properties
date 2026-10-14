@@ -51,7 +51,7 @@ export default class ClearPropertiesPlugin extends Plugin {
 		this.registerEvent(this.app.metadataCache.on("changed", () => this.addBars()));
 
 		this.addCommand({
-			id: "clear-properties",
+			id: "clear-all",
 			name: t.command,
 			icon: "eraser",
 			checkCallback: (checking) => {
@@ -86,8 +86,7 @@ export default class ClearPropertiesPlugin extends Plugin {
 				const list = content.querySelector<HTMLElement>(":scope > .metadata-properties");
 				if (list) {
 					const fit = () => {
-						bar.style.top = `${list.offsetTop}px`;
-						bar.style.height = `${list.offsetHeight}px`;
+						bar.setCssStyles({ top: `${list.offsetTop}px`, height: `${list.offsetHeight}px` });
 					};
 					const ro = new ResizeObserver(fit);
 					ro.observe(list);

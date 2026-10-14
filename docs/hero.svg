@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; fill: #2f2a24; }
+    .title { font-size: 34px; font-weight: 700; }
+    .sub { font-size: 18px; fill: #8b8177; }
+    .label { font-size: 14px; font-weight: 600; fill: #8b8177; letter-spacing: 0.08em; }
+    .h1 { font-size: 26px; font-weight: 700; }
+    .key { font-size: 16px; fill: #5c5249; }
+    .val { font-size: 16px; fill: #2f2a24; }
+    .empty { font-size: 16px; fill: #b3aa9f; }
+    .pill { fill: #f3e6c8; }
+    .pill-t { font-size: 15px; fill: #9a6a1c; }
+    .body { fill: #e9e3d8; }
+    .hair { stroke: #e3ddd2; stroke-width: 1.4; }
+    .hair-hi { stroke: #b9ae9f; stroke-width: 1.4; }
+    .icon { fill: none; stroke: #a69a8b; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .icon-hi { fill: none; stroke: #6f6458; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .note { font-size: 15px; fill: #5c5249; }
+    .note-b { font-size: 15px; font-weight: 600; fill: #7a5af8; }
+    .callout { fill: none; stroke: #7a5af8; stroke-width: 1.6; stroke-dasharray: 5 4; }
+    .arrow { fill: none; stroke: #7a5af8; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .toast-t { font-size: 15px; fill: #2f2a24; }
+    .toast-a { font-size: 15px; fill: #7a5af8; text-decoration: underline; }
+  </style>
+  <defs>
+    <!-- lucide trash-2 -->
+    <g id="trash">
+      <path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+      <path d="M10 11v6"/><path d="M14 11v6"/>
+    </g>
+    <!-- lucide list -->
+    <g id="i-list"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8h8"/><path d="M8 12h8"/><path d="M8 16h8"/></g>
+    <!-- lucide text -->
+    <g id="i-text"><path d="M4 6h16"/><path d="M4 11h16"/><path d="M4 16h10"/></g>
+    <!-- lucide tag -->
+    <g id="i-tag"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r="1"/></g>
+    <!-- lucide corner-down-right -->
+    <g id="i-alias"><path d="M15 10l5 5-5 5"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></g>
+    <!-- pointer cursor -->
+    <g id="cursor">
+      <path d="M0 0 L0 22 L6 17 L10 26 L14 24 L10 15 L17 15 Z" fill="#ffffff" stroke="#2f2a24" stroke-width="1.6" stroke-linejoin="round"/>
+    </g>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#5c4a32" flood-opacity="0.16"/>
+    </filter>
+    <!-- one property row: icon, key, value -->
+  </defs>
+
+  <rect width="1200" height="800" fill="#FAF8F4"/>
+
+  <text x="60" y="78" class="title">Clear Properties</text>
+  <text x="60" y="110" class="sub">Hover the properties, click the line on their left. All of them are gone, and one undo brings them back.</text>
+
+  <!-- ===== BEFORE ===== -->
+  <text x="60" y="166" class="label">HOVER THE PROPERTIES</text>
+  <g transform="translate(60,184)">
+    <rect width="500" height="540" rx="14" fill="#fdfcfa" stroke="#e3ddd2" filter="url(#shadow)"/>
+    <text x="64" y="62" class="h1">An old note</text>
+
+    <!-- rows -->
+    <g transform="translate(64,96)">
+      <use href="#i-list" class="icon" transform="translate(0,-15) scale(0.8)"/>
+      <text x="30" y="0" class="key">type</text>
+      <text x="170" y="0" class="val">case study</text>
+
+      <use href="#i-list" class="icon" transform="translate(0,29) scale(0.8)"/>
+      <text x="30" y="44" class="key">status</text>
+      <text x="170" y="44" class="val">not tried</text>
+
+      <use href="#i-text" class="icon" transform="translate(0,73) scale(0.8)"/>
+      <text x="30" y="88" class="key">related</text>
+      <text x="170" y="88" class="empty">Empty</text>
+
+      <use href="#i-text" class="icon" transform="translate(0,117) scale(0.8)"/>
+      <text x="30" y="132" class="key">link</text>
+      <text x="170" y="132" class="empty">Empty</text>
+
+      <use href="#i-tag" class="icon" transform="translate(0,161) scale(0.8)"/>
+      <text x="30" y="176" class="key">tags</text>
+      <rect x="166" y="158" width="66" height="26" rx="13" class="pill"/>
+      <text x="178" y="176" class="pill-t">#ideas</text>
+
+      <use href="#i-alias" class="icon" transform="translate(0,205) scale(0.8)"/>
+      <text x="30" y="220" class="key">aliases</text>
+      <text x="170" y="220" class="empty">Empty</text>
+    </g>
+
+    <!-- the vertical hairline with the trash icon (what the plugin adds) -->
+    <line x1="34" y1="78" x2="34" y2="180" class="hair-hi"/>
+    <use href="#trash" class="icon-hi" transform="translate(24,190) scale(0.84)"/>
+    <line x1="34" y1="222" x2="34" y2="324" class="hair-hi"/>
+
+    <!-- the native "+" divider -->
+    <line x1="34" y1="352" x2="236" y2="352" class="hair"/>
+    <text x="250" y="358" class="empty" style="font-size:20px">+</text>
+    <line x1="272" y1="352" x2="466" y2="352" class="hair"/>
+
+    <!-- body text -->
+    <rect x="64" y="392" width="360" height="12" rx="6" class="body"/>
+    <rect x="64" y="420" width="300" height="12" rx="6" class="body"/>
+    <rect x="64" y="448" width="330" height="12" rx="6" class="body"/>
+
+    <use href="#cursor" transform="translate(42,214)"/>
+  </g>
+
+  <!-- callout on the hairline -->
+  <text x="60" y="756" class="note"><tspan class="note-b">Appears on hover,</tspan> styled like the "+" line below it.</text>
+  <text x="60" y="778" class="note">Always visible on phones and tablets.</text>
+
+  <!-- arrow -->
+  <path d="M590 454 H 626" class="arrow"/>
+  <path d="M614 442 L 628 454 L 614 466" class="arrow"/>
+
+  <!-- ===== AFTER ===== -->
+  <text x="640" y="166" class="label">ONE CLICK LATER</text>
+  <g transform="translate(640,184)">
+    <rect width="500" height="540" rx="14" fill="#fdfcfa" stroke="#e3ddd2" filter="url(#shadow)"/>
+    <text x="64" y="62" class="h1">An old note</text>
+    <rect x="64" y="100" width="360" height="12" rx="6" class="body"/>
+    <rect x="64" y="128" width="300" height="12" rx="6" class="body"/>
+    <rect x="64" y="156" width="330" height="12" rx="6" class="body"/>
+    <rect x="64" y="184" width="250" height="12" rx="6" class="body"/>
+
+    <!-- notice -->
+    <g transform="translate(150,452)">
+      <rect width="320" height="52" rx="10" fill="#ffffff" stroke="#e3ddd2" filter="url(#shadow)"/>
+      <text x="20" y="32" class="toast-t">Deleted 6 properties</text>
+      <text x="246" y="32" class="toast-a">Undo</text>
+    </g>
+  </g>
+
+  <text x="640" y="756" class="note"><tspan class="note-b">Undo</tspan> in the notice, or ⌘Z / Ctrl+Z, restores every property.</text>
+  <text x="640" y="778" class="note">Works in editing and reading view. Also a command for a hotkey.</text>
+</svg>

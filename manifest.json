@@ -2,8 +2,8 @@
   "id": "clear-properties",
   "name": "Clear Properties",
   "version": "0.1.0",
-  "minAppVersion": "1.5.7",
-  "description": "Delete all properties (frontmatter) of a note in one click: hover the properties block and click the bar on its left. Undoable.",
+  "minAppVersion": "1.8.7",
+  "description": "Delete, remove or strip all properties (YAML frontmatter / front matter metadata) from a note in one click with a button beside the properties block. Undoable. Quick cleanup of old notes, mobile too.",
   "author": "RainaJIA716",
   "isDesktopOnly": false
 }

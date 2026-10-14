@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" width="900" height="1600">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; fill: #2f2a24; }
+    .title { font-size: 52px; font-weight: 700; }
+    .sub { font-size: 28px; fill: #8b8177; }
+    .h1 { font-size: 40px; font-weight: 700; }
+    .key { font-size: 26px; fill: #5c5249; }
+    .val { font-size: 26px; fill: #2f2a24; }
+    .empty { font-size: 26px; fill: #b3aa9f; }
+    .pill { fill: #f3e6c8; }
+    .pill-t { font-size: 24px; fill: #9a6a1c; }
+    .body { fill: #e9e3d8; }
+    .hair { stroke: #e3ddd2; stroke-width: 2; }
+    .hair-hi { stroke: #c9bfb1; stroke-width: 2; }
+    .icon { fill: none; stroke: #a69a8b; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .icon-hi { fill: none; stroke: #8b8177; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .note { font-size: 26px; fill: #5c5249; }
+    .note-b { font-size: 26px; font-weight: 600; fill: #7a5af8; }
+    .toast-t { font-size: 26px; fill: #2f2a24; }
+    .toast-a { font-size: 26px; fill: #7a5af8; text-decoration: underline; }
+  </style>
+  <defs>
+    <g id="trash">
+      <path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+      <path d="M10 11v6"/><path d="M14 11v6"/>
+    </g>
+    <g id="i-list"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8h8"/><path d="M8 12h8"/><path d="M8 16h8"/></g>
+    <g id="i-text"><path d="M4 6h16"/><path d="M4 11h16"/><path d="M4 16h10"/></g>
+    <g id="i-tag"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r="1"/></g>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#5c4a32" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1600" fill="#FAF8F4"/>
+
+  <text x="70" y="130" class="title">Clear Properties</text>
+  <text x="70" y="182" class="sub">On a phone the line is always there.</text>
+  <text x="70" y="222" class="sub">Tap it to delete every property of the note.</text>
+
+  <!-- phone -->
+  <g transform="translate(150,290)">
+    <rect width="600" height="1200" rx="64" fill="#2f2a24"/>
+    <rect x="16" y="16" width="568" height="1168" rx="50" fill="#fdfcfa"/>
+    <rect x="235" y="34" width="130" height="34" rx="17" fill="#2f2a24"/>
+
+    <text x="76" y="190" class="h1">An old note</text>
+
+    <g transform="translate(76,262)">
+      <use href="#i-list" class="icon" transform="translate(0,-24) scale(1.25)"/>
+      <text x="46" y="0" class="key">type</text>
+      <text x="230" y="0" class="val">case study</text>
+
+      <use href="#i-list" class="icon" transform="translate(0,46) scale(1.25)"/>
+      <text x="46" y="70" class="key">status</text>
+      <text x="230" y="70" class="val">not tried</text>
+
+      <use href="#i-text" class="icon" transform="translate(0,116) scale(1.25)"/>
+      <text x="46" y="140" class="key">link</text>
+      <text x="230" y="140" class="empty">Empty</text>
+
+      <use href="#i-tag" class="icon" transform="translate(0,186) scale(1.25)"/>
+      <text x="46" y="210" class="key">tags</text>
+      <rect x="224" y="180" width="104" height="42" rx="21" class="pill"/>
+      <text x="242" y="210" class="pill-t">#ideas</text>
+    </g>
+
+    <!-- the line, always visible on mobile -->
+    <line x1="48" y1="228" x2="48" y2="314" class="hair-hi"/>
+    <use href="#trash" class="icon-hi" transform="translate(34,326) scale(1.18)"/>
+    <line x1="48" y1="370" x2="48" y2="482" class="hair-hi"/>
+
+    <!-- tap ring -->
+    <circle cx="48" cy="340" r="34" fill="#7a5af8" fill-opacity="0.12" stroke="#7a5af8" stroke-width="2.5"/>
+
+    <line x1="48" y1="530" x2="268" y2="530" class="hair"/>
+    <text x="288" y="540" class="empty" style="font-size:32px">+</text>
+    <line x1="332" y1="530" x2="552" y2="530" class="hair"/>
+
+    <rect x="76" y="590" width="440" height="18" rx="9" class="body"/>
+    <rect x="76" y="634" width="370" height="18" rx="9" class="body"/>
+    <rect x="76" y="678" width="410" height="18" rx="9" class="body"/>
+
+  </g>
+
+  <text x="70" y="1550" class="note">A notice with <tspan class="note-b">Undo</tspan> puts every property back.</text>
+</svg>

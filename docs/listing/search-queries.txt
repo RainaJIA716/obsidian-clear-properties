@@ -1,0 +1,26 @@
+delete properties
+remove properties
+clear properties
+delete frontmatter
+remove frontmatter
+clear frontmatter
+delete yaml
+remove yaml
+strip yaml
+strip frontmatter
+remove metadata
+delete all properties
+remove all properties
+bulk delete properties
+yaml cleanup
+frontmatter cleanup
+clean properties
+clean frontmatter
+reset properties
+properties button
+frontmatter button
+delete metadata
+remove front matter
+delete front matter
+properties mobile
+undo properties
