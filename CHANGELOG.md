@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- No changes to the plugin itself (`main.js` and `styles.css` are byte-identical to 0.1.0).
+- Regenerated `package-lock.json` from scratch so the community review can install
+  dependencies and verify the build.
+
 ## 0.1.0
 
 First release.

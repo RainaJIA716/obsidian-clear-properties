@@ -1,6 +1,6 @@
 {
   "name": "clear-properties",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Delete, remove or strip all properties (YAML frontmatter / front matter metadata) from a note in one click with a button beside the properties block. Undoable. Quick cleanup of old notes, mobile too.",
   "main": "main.js",
   "scripts": {
